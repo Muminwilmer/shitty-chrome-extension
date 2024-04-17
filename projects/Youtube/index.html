@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Project Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="buttonDiv">
+        <img id="newsImage" src="images/youtube.ico" alt="News Image" class="buttonImg">
+		<div class="toggle-container">
+			<input type="checkbox" class="toggle-input" id="toggleSwitch">
+			<label class="toggle-label" for="toggleSwitch">
+				<div class="toggle-slider"></div>
+			</label>
+		</div>
+    </div>
+</body>
+</html>
+
+<style>
+    body {
+        background-color: #003366;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+	.toggle-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+
+	.toggle-input {
+		display: none;
+	}
+
+	.toggle-label {
+		display: block;
+		width: 60px;
+		height: 30px;
+		border-radius: 15px;
+		position: relative;
+		cursor: pointer;
+		background-color: #ccc; /* Default color for disabled state */
+	}
+
+	.toggle-slider {
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: #fff; /* Ensure the ball is visible */
+		transition: transform 0.3s ease-in-out;
+	}
+
+	.toggle-input:checked + .toggle-label .toggle-slider {
+		transform: translateX(30px);
+	}
+
+	/* Style for enabled state */
+	.toggle-input:checked + .toggle-label {
+		background-color: #4CAF50; /* Green color for enabled state */
+	}
+    .buttonImg {
+        width: 6em;
+        height: auto;
+        padding-bottom: 0.2em;
+    }
+</style>
