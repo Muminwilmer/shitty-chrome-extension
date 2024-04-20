@@ -8,10 +8,22 @@
 </head>
 <body>
     <div class="buttonDiv">
-        <img id="newsImage" src="images/youtube.ico" alt="News Image" class="buttonImg">
+			<img id="newsImage" src="images/flag.png" alt="News Image" class="buttonImg">
 		<div class="toggle-container">
-			<input type="checkbox" class="toggle-input" id="toggleSwitch">
-			<label class="toggle-label" for="toggleSwitch">
+			<input type="checkbox" class="toggle-input" id="prideSwitch">
+			<label class="toggle-label" for="prideSwitch">
+				<div class="toggle-slider"></div>
+			</label>
+		</div>
+    </div>
+
+		<div style="padding: 8px;"></div>
+
+		<div class="buttonDiv">
+			<img id="newsImage" src="images/youtube.ico" alt="News Image" class="buttonImg">
+		<div class="toggle-container">
+			<input type="checkbox" class="toggle-input" id="youtubeSwitch">
+			<label class="toggle-label" for="youtubeSwitch">
 				<div class="toggle-slider"></div>
 			</label>
 		</div>
@@ -20,12 +32,12 @@
 </html>
 
 <style>
-    body {
-        background-color: #003366;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+	body {
+		background-color: #003366;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 	.toggle-container {
 		display: flex;
 		align-items: center;
@@ -66,9 +78,9 @@
 	.toggle-input:checked + .toggle-label {
 		background-color: #4CAF50; /* Green color for enabled state */
 	}
-    .buttonImg {
-        width: 6em;
-        height: auto;
-        padding-bottom: 0.2em;
-    }
+	.buttonImg {
+		width: 6em;
+		height: auto;
+		padding-bottom: 0.2em;
+	}
 </style>
