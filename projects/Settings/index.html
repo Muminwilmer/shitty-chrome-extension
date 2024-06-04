@@ -7,6 +7,7 @@
     <script src="index.js"></script>
 </head>
 <body>
+	<div id="container">
     <div class="buttonDiv">
 			<img id="newsImage" src="images/flag.png" alt="News Image" class="buttonImg">
 		<div class="toggle-container">
@@ -27,7 +28,20 @@
 				<div class="toggle-slider"></div>
 			</label>
 		</div>
+		</div>
+
+		<div style="padding: 8px;"></div>
+
+		<div class="buttonDiv">
+			<img id="newsImage" src="images/youtube.ico" alt="News Image" class="buttonImg">
+		<div class="toggle-container">
+			<input type="checkbox" class="toggle-input" id="oldGoogleSwitch">
+			<label class="toggle-label" for="oldGoogleSwitch">
+				<div class="toggle-slider"></div>
+			</label>
+		</div>
     </div>
+	</div>
 </body>
 </html>
 
@@ -44,7 +58,9 @@
 		justify-content: center;
 		position: relative;
 	}
-
+	#container {
+		display: flex;
+	}
 	.toggle-input {
 		display: none;
 	}

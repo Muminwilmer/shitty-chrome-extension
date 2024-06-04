@@ -1,4 +1,30 @@
 
+// Old Google Fix
+function toggleOldGoogle() {
+  chrome.storage.sync.get('oldGoogle', function(result) {
+      const oldGoogleValue = result.oldGoogle || false;
+      const updatedValue = !oldGoogleValue;
+
+      chrome.storage.sync.set({ 'oldGoogle': updatedValue }, function() {});
+  });
+}
+
+window.addEventListener('load', function() {
+  chrome.storage.sync.get('oldGoogle', function(result) {
+      const oldGoogleValue = result.oldGoogle || false;
+      const toggleInput = document.getElementById('oldGoogleSwitch');
+      console.log(toggleInput);
+
+      if (toggleInput) {
+          toggleInput.checked = oldGoogleValue;
+          toggleInput.addEventListener('click', toggleOldGoogle);
+      } else {
+          console.log("toggleInput is not defined");
+      }
+  });
+});
+
+
 // Pride Flag Fix
 function togglePrideflag() {
   chrome.storage.sync.get('prideflag', function(result) {
